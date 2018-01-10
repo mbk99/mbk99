@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        * {
+            font-family: Avenir;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%; /* Full bredde */
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* For at padding og plassering holder seg på plass */
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical /* For at bruker skal kunne justere størrelsen på tekstboksen (ikke horisontalt) */
+        }
+
+        input[type=submit] {
+            background-color: #254d9b;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.9s ease;
+
+        }
+
+        input[type=submit]:hover {
+            background-color: #254d9b;
+        }
+
+        input[type=submit]:after {
+            position: absolute;
+            content: no-close-quote;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #2573d7;
+            transition: width 0.8s ease;
+            z-index: -1;
+        }
+
+        /* Bakgrunn og padding rundt hele skjemaet */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="alt">
+    <label for="show-menu" class="show-menu" style="cursor: s-resize;">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="menu">
+        <li><a href="ai_hjem.html">Hjem</a></li>
+        <li>
+            <a href="#">Kunstig Intelligens</a>
+            <ul class="hidden">
+                <li><a href="drapsroboter.html">Krig</a></li>
+                <li><a href="arbeidsmarked.html">Arbeidsmarked</a></li>
+                <li><a href="transport.html">Transport</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="ai_kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+</div>
+
+<br><br><br><br>
+<div class="container">
+    <form action="mailto:caspergavin@icloud.com" method="post" enctype="text/plain">
+
+        <label for="fname">Fornavn</label>
+        <input type="text" required id="fname" name="fornavn" placeholder="Fornavn..">
+
+        <label for="lname">Etternavn</label>
+        <input type="text" required id="lname" name="etternavn" placeholder="Etternavn..">
+
+        <label for="country">Land</label>
+        <select  required id="country" name="country">
+            <option value="norge">Norge</option>
+            <option value="sverige">Sverige</option>
+            <option value="danmark">Danmark</option>
+            <option value="finland">Finland</option>
+            <option value="restenaveuropa">Resten av Europa</option>
+            <option value="usa">USA</option>
+            <option value="asia">Asia</option>
+            <option value="søramerika">Sør-Amerika</option>
+            <option value="oseania">Oseania</option>
+
+
+
+        </select>
+
+        <label for="subject">Spørsmål</label>
+        <textarea required id="subject" name="subject" placeholder="Skriv noe.." style="height:200px"></textarea>
+
+        <input type="submit" value="Send inn">
+
+    </form>
+</div>
+
+<footer>
+    <h2>© Lazz og Co 2017, Ski Videregående Skole</h2>
+</footer>
+
+</body>
+</html>

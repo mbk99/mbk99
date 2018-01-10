@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hjem</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        h1{
+            font-family:Avenir,sans-serif;
+        }
+
+
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-top: 30px;
+            text-align: center;
+            justify-items: center;
+            position: relative;
+
+        }
+
+
+
+        .flipp-content{
+            perspective: 1000px;
+
+        }
+
+        .flipp-content:hover .flipper, .flipp-content.hover .flipper{
+            transform: rotateY(180deg);
+        }
+
+
+        .flipp-content, .front, .back {
+            width: 400px;
+            height: 400px;
+        }
+
+        .flipper{
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front, .back{
+            backface-visibility: hidden;
+            position: absolute;
+            top:inherit;
+            left: inherit;
+            border: 5px solid black;
+        }
+
+
+        .front{
+            z-index: 2;
+            transform:rotateY(0deg);
+        }
+
+
+        .back{
+            transform: rotateY(180deg);
+        }
+
+
+        #backstyle{
+            height: 400px;
+            width: 400px;
+            font-size: 19px;
+            line-height: 28px;
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            font-family: Avenir, sans-serif;
+            background-color: #2573d7;
+
+        }
+
+        a{
+            color: darkblue;
+        }
+
+
+
+        @media(max-width: 1000px) {
+            main { grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 800px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="alt">
+    <label for="show-menu" class="show-menu" style="cursor: s-resize;">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="menu">
+        <li><a href="ai_hjem.html">Hjem</a></li>
+        <li>
+            <a href="#">Kunstig Intelligens</a>
+            <ul class="hidden">
+                <li><a href="drapsroboter.html">Krig</a></li>
+                <li><a href="arbeidsmarked.html">Arbeidsmarked</a></li>
+                <li><a href="transport.html">Transport</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Om oss</a>
+            <ul class="hidden">
+                <li><a href="ai_kontakt.html">Kontakt</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<br><br><br>
+<h1>Muligheter og Utfordringer med Kunstig Intelligens</h1>
+
+<main>
+
+
+    <!--Flipp 1-->
+
+    <div class="flipp-content">
+
+        <div class="flipper">
+            <div class="front"><img src="Bilder2/reaper5000.jpg" height="400px" width="400px"></div>
+            <div class="back" id="backstyle">
+
+                <h3>Krig</h3>
+                <p>Kunstig intelligens er noe som aktivt brukes i moderne krigføring, og som finnes i et mangfold av former. Fra droner med avanserte våpen- og rekognoseringsutstyr, til interkontinentale missiler med nok slagkraft til å utslette hele menneskeheten. I fremtiden kan det være en robot som avgjør hvor disse missilene skal slå ned, eller hvem dronen skal skyte på. Dette er noe som skremmer mange, og har ført til mange opphetede debatter.
+                    <a href="drapsroboter.html">Les mer...</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Flipp 2-->
+
+    <div class="flipp-content">
+
+        <div class="flipper">
+            <div class="front"><img src="Bilder2/meme2.jpg" height="400px" width="400px"></div>
+            <div class="back" id="backstyle">
+                <h3>Arbeidsmarked</h3>
+                <p>Fremtidens arbeidsmarked vil utvilsomt se annerledes ut enn dagens arbeidsmarked. Tusenvis av jobber vil bli overtatt av roboter, noe som vil spesielt gå utover folk i starten av arbeidslivet, og folk med lav utdannelse. Det er usikkert om fremtidens arbeidsmarked vil tilby nok jobber til hele befolkningen. Hvordan skal vi takle dette skiftet i fremtiden?
+                    <a href="arbeidsmarked.html">Trykk her for å lese mer!</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Flipp 3-->
+
+    <div class="flipp-content">
+
+        <div class="flipper">
+            <div class="front"><img src="Bilder2/teslasemi.jpg" height="400px" width="400px"></div>
+            <div class="back" id="backstyle">
+                <h3>Transport</h3>
+                <p>Yrkessjåfør er et av de vanligste yrkene i verden. Det vil si at ekstremt mange arbeidsplasser vil forsvinne, om biler blir selvkjørende. Per dags dato finnes det allerede selvkjørende biler og busser, men som hindres av ulike reguleringer. Det finnes også svært mange selvkjørende tog, og det snakkes også om å lage totalt selvkjørende fly i fremtiden.
+                    <a href="transport.html">Trykk her for å lese mer!</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Flipp-end-->
+
+</main>
+
+<br><br>
+
+<footer>
+    <h2>Lazz og Co 2017, Ski Videregående Skole, All rights resevered ©</h2>
+</footer>
+
+
+</body>
+</html>
